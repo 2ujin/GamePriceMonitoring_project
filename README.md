@@ -17,7 +17,7 @@ STEAM : https://store.steampowered.com/
 참고 예시 : https://psprices.com/region-kr/game/122400/pa-keurai-4-dijiteol-goldeu-edisyeon-jepumpan
 *위의 예시 사이트는 하루에 한번 PS4 사이트에 있는 가격 정보 내용을 가져와서 출력해주는 사이트 입니다.
 
-화이팅 :-)
+Develop Diary
 ------------------------------------------------------------------------------------------------------
 
 #0726
