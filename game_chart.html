@@ -6,13 +6,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 	<style>
         body{
+            margin: 0;
+	        padding: 0;
             background-color: antiquewhite;
+        }
+        .header{
+            background-color: burlywood;
         }
         div{
             margin: auto;
             text-align: center;
         }
-        h1, h3{
+        h1, h3, h4{
             text-align: center;
         }
 	    canvas{
@@ -21,11 +26,14 @@
 		    -ms-user-select: none;
 	    }
         img {
-            transform: scale(0.8);
-            -webkit-transform: scale(0.8);
-            -moz-transform: scale(0.8);
-            -ms-transform: scale(0.8);
-            -o-transform: scale(0.8);
+            width: auto; height: auto;
+            max-width: 400px;
+            max-height: 400px;
+            transform: scale(0.9);
+            -webkit-transform: scale(0.9);
+            -moz-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            -o-transform: scale(0.9);
             transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
         }
         img:hover{
@@ -35,18 +43,19 @@
             -ms-transform: scale(1.0);
             -o-transform: scale(1.0);
         }
+        a{
+            text-decoration: none;
+            color: black;
+        }
 	</style>
 </head>
 
 <body>
-<h1> 🎮 GAME PRICE 🎮 </h1>
-	<div style="width:75%;">
-		<canvas id="line-chart" width="200" height="50"></canvas>
+<div class="header"><a href="game_chart.html"><h1> 🎮 GAME PRICE 🎮 </h1></a></div>
+	<div style="width:85%;">
+		<canvas id="line-chart" width="200" height="60"></canvas>
 	</div>
     <br>
-    <div style="width:75%;">
-        <canvas id="line-chart1" width="100" height="20"></canvas>
-	</div>
 	<script>
         new Chart(document.getElementById("line-chart"), {
             type: 'line',
@@ -86,13 +95,14 @@
             }
         }});
 	</script>
-<div>
+    <h4> Click to see information about the game 🔥 </h4>
+    <div>
         <a href="game1.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/612060/header.jpg?t=1564228826"></a>
         <a href="game2.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/1028940/header.jpg?t=1564433995"></a>
-        <a href="game3.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/1097420/header.jpg?t=1564538976"></a><br>
+        <a href="game3.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/1097420/header.jpg?t=1564538976"></a>
         <a href="game4.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/772730/header.jpg?t=1564101471"></a>
         <a href="game5.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/1103100/header.jpg?t=1564063226"></a>
-</div>
+    </div>
 </body>
 
 </html>

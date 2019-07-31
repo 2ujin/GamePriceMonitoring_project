@@ -6,11 +6,127 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 	<style>
         body{
+            margin: 0;
+	        padding: 0;
             background-color: antiquewhite;
+        }
+        .header{
+            background-color: burlywood;
+        }
+        div, table{
+            margin: auto;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            width: auto; height: auto;
+            max-width: 400px;
+            max-height: 400px;
+            float: left;
+        }
+        td img{
+            display: block;
+            text-align: center;
+        }
+        .table{
+            height: auto;
+            width: 850px;
+            text-align: left;
+            font-family: AppleSDGothicNeoB00;
+        }
+        b{
+            color: dodgerblue;
+            font-size: 22px;
+        }
+        th,td{
+            margin: 10px;
+        }
+        s{
+            color: #999999;
+        }
+        .game_area_description {
+            text-align: left;
+            width: 75%;
+            line-height: 1.5em;
+            font-size: 14px;
+            margin-top: 30px;
+            overflow: hidden;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: normal;
+        }
+        a{
+            text-decoration: none;
+            color: black;
         }
     </style>
 </head>
 <body>
+<div class="header"><a href="game_chart.html"><h1> 🎮 GAME PRICE 🎮 </h1></a></div>
+    <div class="information">
+        <table class="table">
+            <tr>
+                <td><img src="https://steamcdn-a.akamaihd.net/steam/apps/1097420/header.jpg?t=1564538976"></td>
+                <td>
+                    <p> <b> No-brainer Heroes 挂机吧！勇者 </b> <br>
+                    Dragon is a Semi-Idle Game with varied kind of skills. <br></p>
 
+                    <s>₩ 8,500 </s> ->  ₩ 7,650 <br>
+                    RELEASE DATE: 26 Jul, 2019 <br>
+                    DEVELOPER: OnigiriStudio
+                </td>
+            </tr>
+        </table>
+    </div>
+	<div style="width:75%;" class="chart">
+    <canvas id="line-chart" width="200" height="50"></canvas> <!-- game price chart canvas -->
+	</div>
+	<script>
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+            labels: ['11시 31분','12시 01분','12시 31분','13시 01분','13시 31분','14시 01분','14시 31분','15시 01분','15시 31분','16시 01분'],
+            datasets: [{
+            data: [7650,7650,7650,7650,7650,7650,7650,7650,7650,7650],
+            label: "💜 Nobrainer_Heroes",
+            borderColor: "#3cba9f",
+            fill: false
+            },
+            ]},
+        options: {
+            title: {
+            display: true,
+            }
+        }});
+	</script>
+    <br><br>
+    <hr size="1" width="75%" style="color:#999999; border-style:dotted">
+    <div id="game_area_description" class="game_area_description">
+        <h2>About This Game</h2>
+        <h2 class="bb_tag">25 Heroes</h2>
+        Each hero has its own characteristics and playability, no weak heroes, only the combinations you can't think of.<br>
+        <img src="https://steamcdn-a.akamaihd.net/steam/apps/1097420/extras/Action.gif?t=1564538976"><h2 class="bb_tag">50 Treasures</h2>
+        Collect treasures! A reasonable mix of treasures will turn the adventurer into the dragon killer!<br>
+        <img src="https://steamcdn-a.akamaihd.net/steam/apps/1097420/extras/Action2.gif?t=1564538976"><h2 class="bb_tag">6 Dragons</h2>
+        Each dragon has an ultimate power. Defeat them and save the world!<h2 class="bb_tag">Game Features</h2>
+        ·Many map chapters allow the player to choose, the player can choose different routes on each map, and different routes
+        will have different heroes and treasures waiting for the player to collect.<br>·Camp, market, equipment store, smithy, notice,
+        businessman, clock tower. Diverse town management gameplay will helps you to improve your team.<br>
+        ·Rich and diverse random events，make your choice，get rewards or accept punishment.<br>
+        ·Rich hero skills. Understand the characteristics of each hero and learn skills based on their characteristics,
+        it can perform up to their full capabilities.<br>·The match between heroes and treasures, heroes and heroes,
+        treasures and treasures, give your strategy choices based on different levels.<br>·Brand new week gameplay.
+        At the beginning of each adventure, you can choose different heroes, treasures and initial rewards.
+        <h2 class="bb_tag">Background story</h2>Swire black dragon has now awoken, evil devil gas engulfed the land again.
+        Countless lives can not resist the erosion of the devil gas, becomes demons.
+        Peoples struggling with Death and despair.<br>
+        As the lord of a town, can you raise the warriors scattered around, train them, and finally lead them to defeat the Black Dragon
+        and save this chaotic continent?
+        <h2 class="bb_tag">The Early Access Version</h2>
+        Includes the full content of the first chapter map and the second chapter map.
+    </div>
+    <br>
+    <br>
 </body>
 </html>

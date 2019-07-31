@@ -6,11 +6,130 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 	<style>
         body{
+            margin: 0;
+	        padding: 0;
             background-color: antiquewhite;
+        }
+        .header{
+            background-color: burlywood;
+        }
+        div, table{
+            margin: auto;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            width: auto; height: auto;
+            max-width: 400px;
+            max-height: 400px;
+            float: left;
+        }
+        td img{
+            display: block;
+            text-align: center;
+        }
+        .table{
+            height: auto;
+            width: 850px;
+            text-align: left;
+            font-family: AppleSDGothicNeoB00;
+        }
+        b{
+            color: dodgerblue;
+            font-size: 22px;
+        }
+        th,td{
+            margin: 10px;
+        }
+        s{
+            color: #999999;
+        }
+        .game_area_description {
+            text-align: left;
+            width: 75%;
+            line-height: 1.5em;
+            font-size: 14px;
+            margin-top: 30px;
+            overflow: hidden;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: normal;
+        }
+        a{
+            text-decoration: none;
+            color: black;
         }
     </style>
 </head>
 <body>
+<div class="header"><a href="game_chart.html"><h1> 🎮 GAME PRICE 🎮 </h1></a></div>
+    <div class="information">
+        <table class="table">
+            <tr>
+                <td><img src="https://steamcdn-a.akamaihd.net/steam/apps/1103100/header.jpg?t=1564583265"></td>
+                <td>
+                    <p> <b> 1000 days to escape </b> <br>
+                    You have to realize the largest space program .<br></p>
 
+                    <s>₩ 5,500 </s> ->  ₩ 4,120 <br>
+                    RELEASE DATE: 25 Jul, 2019 <br>
+                    DEVELOPER: Lemon Squeezy
+                </td>
+            </tr>
+        </table>
+    </div>
+	<div style="width:75%;" class="chart">
+    <canvas id="line-chart" width="200" height="50"></canvas> <!-- game price chart canvas -->
+	</div>
+	<script>
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+            labels: ['11시 31분','12시 01분','12시 31분','13시 01분','13시 31분','14시 01분','14시 31분','15시 01분','15시 31분','16시 01분'],
+            datasets: [{
+            data: [4120,4120,4120,4120,4120,4120,4120,4120,4120,4120],
+            label: "💜 1000 days to escape",
+            borderColor: "#c45850",
+            fill: false
+            }
+            ]},
+        options: {
+            title: {
+            display: true,
+            }
+        }});
+	</script>
+    <br><br>
+    <hr size="1" width="75%" style="color:#999999; border-style:dotted">
+     <div id="game_area_description" class="game_area_description">
+         <h2>About This Game</h2>
+         <strong>1000 days to escape</strong> is a space arcade simulator. This game covers serious issues in an ironic form.<br><br>
+         Life on the Earth is going to disappear. Due to huge temps of population growth and global development of human civilization,
+         irreversible climate change and disturbance of stable processes in the biosphere of our planet occur.
+         Calculations has shown that oxygen remains for 1000 days.<br><br>At the World Summit on the Global Security
+         you've got a carte blanche to realize the largest space program ever. The main goal is to save as many people as you can.<br><br>
+         Don't worry, all modern technologies are at your disposal.
+         <h2 class="bb_tag">Gameplay</h2>
+         <ul class="bb_ul">
+             <li>Find new planets in the outer space with a telescope.<br></li>
+             <li>Explore them using a scout satellite. Just put it into a rocket, fill up the tank and launch to the selected planet.<br></li>
+             <li>Each world has its own characteristics. There is no atmosphere suitable for people? Too cold? Bring a specific generator.
+                 Mission will be successful if all the conditions of human life are met.<br></li>
+             <li>During space exploration, discover new technologies, earn science points and pimp your spaceport.</li>
+         </ul>
+         <h2 class="bb_tag">Features</h2>
+         <ul class="bb_ul">
+             <li>Creative approach to space flights and the transportation of people.<br></li>
+             <li>The star system is randomly generated at the start of each game.<br></li>
+             <li>Over 25 planets with different characteristics.<br></li>
+             <li>Some planets are inhabited by alien civilizations. To wage war or cooperate, it's up to you.<br></li>
+             <li>There are many different events. Triumphed an alien civilization? Use received resources for technological
+                 development or convert them to science points. Scientists said they are ready to reveal a series of innovations?
+                 Keep them or bargain with enemies is one of the difficult decisions you have to make.</li>
+         </ul>
+         <br>But remember. This is space. It does not cooperate.
+     </div>
+    <br><br>
 </body>
 </html>

@@ -6,11 +6,118 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 	<style>
         body{
+            margin: 0;
+	        padding: 0;
             background-color: antiquewhite;
+        }
+        .header{
+            background-color: burlywood;
+        }
+        div, table{
+            margin: auto;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            width: auto; height: auto;
+            max-width: 400px;
+            max-height: 400px;
+            float: left;
+        }
+        td img{
+            display: block;
+            text-align: center;
+        }
+        .table{
+            height: auto;
+            width: 850px;
+            text-align: left;
+            font-family: AppleSDGothicNeoB00;
+        }
+        b{
+            color: dodgerblue;
+            font-size: 22px;
+        }
+        th,td{
+            margin: 10px;
+        }
+        s{
+            color: #999999;
+        }
+        .game_area_description {
+            text-align: left;
+            width: 75%;
+            line-height: 1.5em;
+            font-size: 14px;
+            margin-top: 30px;
+            overflow: hidden;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: normal;
+        }
+        a{
+            text-decoration: none;
+            color: black;
         }
     </style>
 </head>
 <body>
+<div class="header"><a href="game_chart.html"><h1> 🎮 GAME PRICE 🎮 </h1></a></div>
+    <div class="information">
+        <table class="table">
+            <tr>
+                <td><img src="https://steamcdn-a.akamaihd.net/steam/apps/1028940/header.jpg?t=1564433995"></td>
+                <td>
+                    <p> <b>DHARMA: THE SWAN </b> <br>
+                    Every 108 minutes the button must be pushed. <br></p>
 
+                    <s>₩ 9,500 </s> ->  ₩ 8,550 <br>
+                    RELEASE DATE: 30 Jul, 2019 <br>
+                    DEVELOPER: Star Legion
+                </td>
+            </tr>
+        </table>
+    </div>
+	<div style="width:75%;" class="chart">
+    <canvas id="line-chart" width="200" height="50"></canvas> <!-- game price chart canvas -->
+	</div>
+	<script>
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+            labels: ['11시 31분','12시 01분','12시 31분','13시 01분','13시 31분','14시 01분','14시 31분','15시 01분','15시 31분','16시 01분'],
+            datasets: [{
+            data: [8550,8550,8550,8550,8550,8550,8550,8550,8550,8550],
+            label: "💜 DHARMA: THE SWAN",
+            borderColor: "#8e5ea2",
+            fill: false
+            },
+            ]},
+        options: {
+            title: {
+            display: true,
+            }
+        }});
+	</script>
+    <br><br>
+    <hr size="1" width="75%" style="color:#999999; border-style:dotted">
+    <div id="game_area_description" class="game_area_description">
+        <h2>About This Game</h2>
+        You occurred is located in station 3 or the Swan it will be for the next 540 days.
+        The station 3 was originally constructed as a laboratory where scientists could work to understand the unique electromagnetic
+        fluctuations emanating from...  ...not long after the experiments began however there was an incident and since that time
+        following protocol has been absurd. <br> <br>
+        Every 108 minutes the button must be pushed from the moment the alarm sounds you will have four minutes to enter the code
+        into the microcomputer processor touched into the program when the alarm sounds either you must input the code... ...important
+        that when the alarm sounds the code be entered correctly and in a timely fashion. I do not attempt to use the computer for anything… <br><br>
+        Congratulations! Until your replacement arrived the future of the project is in your hands on behalf of the DeGroots Alvar Hanso
+        and all of us at the dharma initiative thank you. Namaste and good luck.<br><br>
+        Enter code "11" to get into the computer settings<br>
+        Enter code "*2" to get into the monitor settings<br><br>
+        All other codes are secret.
+    </div>
+    <br>
+    <br>
 </body>
 </html>

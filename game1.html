@@ -6,25 +6,82 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 	<style>
         body{
+            margin: 0;
+	        padding: 0;
             background-color: antiquewhite;
         }
-        div{
+        .header{
+            background-color: burlywood;
+        }
+        div, table{
             margin: auto;
             text-align: center;
         }
-        h1, h3{
+        h1{
             text-align: center;
         }
-
+        img{
+            width: auto; height: auto;
+            max-width: 400px;
+            max-height: 400px;
+            float: left;
+        }
+        td img{
+            display: block;
+            text-align: center;
+        }
+        .table{
+            height: auto;
+            width: 850px;
+            text-align: left;
+            font-family: AppleSDGothicNeoB00;
+        }
+        b{
+            color: dodgerblue;
+            font-size: 22px;
+        }
+        th,td{
+            margin: 10px;
+        }
+        s{
+            color: #999999;
+        }
+        .game_area_description {
+            text-align: left;
+            width: 75%;
+            line-height: 1.5em;
+            font-size: 14px;
+            margin-top: 30px;
+            overflow: hidden;
+            font-family: "Motiva Sans", Sans-serif;
+            font-weight: normal;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
     </style>
 </head>
 <body>
-<h1>  🎮 GAME PRICE 🎮 </h1>
-    <div><img src="https://steamcdn-a.akamaihd.net/steam/apps/612060/header.jpg?t=1564228826"></div>
-	<div style="width:75%;">
-<canvas id="line-chart" width="200" height="50"></canvas>
-	</div>
+<div class="header"><a href="game_chart.html"><h1> 🎮 GAME PRICE 🎮 </h1></a></div>
+    <div class="information">
+        <table class="table">
+            <tr>
+                <td><img src="https://steamcdn-a.akamaihd.net/steam/apps/612060/header.jpg?t=1564228826"></td>
+                <td>
+                    <p> <b>Indie_Dream </b> <br>
+                    This is just the story of an young and naive indie dev. <br></p>
 
+                    <s>₩ 1,100 </s> ->  ₩ 930 <br>
+                    RELEASE DATE: 7 Jul, 2019 <br>
+                    DEVELOPER: Lorb Lu
+                </td>
+            </tr>
+        </table>
+    </div>
+	<div style="width:75%;" class="chart">
+    <canvas id="line-chart" width="200" height="50"></canvas> <!-- game price chart canvas -->
+	</div>
 	<script>
         new Chart(document.getElementById("line-chart"), {
             type: 'line',
@@ -43,5 +100,28 @@
             }
         }});
 	</script>
+    <br><br>
+    <hr size="1" width="75%" style="color:#999999; border-style:dotted">
+    <div id="game_area_description" class="game_area_description">
+        <h2>About This Game</h2>
+            <i><strong>A friendly note - The game contains English as a selectable language, but the translation is not fully completed yet. Untranslated part are temporarily replaced by machine translation.</strong></i><br><br>
+            <i>"Make indie games inside an indie game"</i><h2 class="bb_tag">Summary</h2>This is a story about a young and naive indie developer.<br><br>
+            The protagonist is a person who have a dream of publishing his own game. Just like many other newbee developers, he tries to master those skills needed for developing. In addition, he will need to figure out how the world of gamers works.<br>
+            Is him simple and naive enough to have an indie dream?
+            <h2 class="bb_tag">Game</h2>
+            This is an interactive story driven game. Your main goal is to develop indie games inside this indie game.
+            The protagonist’s experience will be revealed within the combination of story-telling and interactive minigames.
+            <h2 class="bb_tag">Features</h2>
+            <ul class="bb_ul">
+                <li>Act as an indie developer.<br></li>
+                <li>Simulate the process of developing with interactions and minigames.<br></li>
+                <li>Wandering and wondering, pushing forward.<br></li>
+                <li>Some parts of the story are based on personal experiences.</li>
+            </ul>
+            <h2 class="bb_tag">Other</h2>
+            This is a personal game. The problems and difficulties encountered during developing this game are also a part of the game itself.<br>
+            Just relax yourself in this interactive story.<br><br>
+            Estimated play time: A bit longer than a movie.<br><br>
+    </div>
 </body>
 </html>

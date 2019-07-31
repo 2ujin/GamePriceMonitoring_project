@@ -11,8 +11,8 @@ from flask import Flask, render_template, request
 from openpyxl import load_workbook
 app = Flask(__name__)
 
-load_wb = load_workbook("/Users/Mirim/Desktop/priceTbl.xlsx", data_only=True) #엑셀 파일 갖고오기
-load_ws = load_wb['priceTbl'] # 시트 이름으로 불러오기
+load_wb = load_workbook("/Users/s2017/Desktop/priceTbl.xlsx", data_only=True) #엑셀 파일 갖고오기
+load_ws = load_wb['priceTbl.'] # 시트 이름으로 불러오기
 
 #30분 주기로 크롤링 한 가격 값
 data_arr1 = [load_ws.cell(2, 4).value, load_ws.cell(2, 5).value, load_ws.cell(2, 6).value];
@@ -28,10 +28,34 @@ data_arr10 = [load_ws.cell(11, 4).value, load_ws.cell(11, 5).value, load_ws.cell
 
 @app.route('/')
 def hello_world():
-    return 'Hello World!'
+    return "Stary python !! ";
 
-@app.route('/test') #test라는 루트
-def test():
+@app.route('/main') #test라는 루트
+def main():
+    return render_template('game_chart.html', title=data_arr1)
+
+@app.route('/game1.html')
+def game1():
+    return render_template('game1.html', title=data_arr1)
+
+@app.route('/game2.html')
+def game2():
+    return render_template('game2.html', title=data_arr1)
+
+@app.route('/game3.html')
+def game3():
+    return render_template('game3.html', title=data_arr1)
+
+@app.route('/game4.html')
+def game4():
+    return render_template('game4.html', title=data_arr1)
+
+@app.route('/game5.html')
+def game5():
+    return render_template('game5.html', title=data_arr1)
+
+@app.route('/game_chart.html')
+def game_chart():
     return render_template('game_chart.html', title=data_arr1)
 
 if __name__ == '__main__':
