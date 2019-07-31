@@ -62,3 +62,14 @@ azure storage에 값 잘 들어가고...!! 엑셀로 expport까지 됨.
 
 * https://m.blog.naver.com/PostView.nhn?blogId=xowww&logNo=220858579104&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 * pip install flask
+
+#0731 <br>
+꺅 눈물난당 python에 있는 데이터를 어떻게 html에 넣어야할지 또 폭풍검색이었눈디... <br>
+flask를 써야되는데...왜 나만 안되고 이상하다 생각했는데 결국 애초에 프로젝트 만들때 flask 프로젝트가 있었음
+ㅋㅋㅋㅋ 허무 어이없음....그래도 어쨌거나 차트에 값 넣는거까지 렬루 성공이다
+이제 진짜 프론트엔드만 좀 예뿌게 하면됨..
+## 최종적으로 해야할일
+* azure storage에 게임 가격 2개정도 추가하기
+* 엑셀에서 값 가져올 때 날짜정보도 같이 갖고오기
+* 프론트엔드 수정
+* 게임 이미지도 넣고 차트도 넣고 ㅎㅎ
