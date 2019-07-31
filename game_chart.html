@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title> 🎮 </title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<style>
+        body{
+            background-color: antiquewhite;
+        }
+        div{
+            margin: auto;
+            text-align: center;
+        }
+        h1, h3{
+            text-align: center;
+        }
+	    canvas{
+		    -moz-user-select: none;
+		    -webkit-user-select: none;
+		    -ms-user-select: none;
+	    }
+        img {
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            -o-transform: scale(0.8);
+            transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
+        }
+        img:hover{
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+            -moz-transform: scale(1.0);
+            -ms-transform: scale(1.0);
+            -o-transform: scale(1.0);
+        }
+	</style>
+</head>
+
+<body>
+<h1> 🎮 GAME PRICE 🎮 </h1>
+	<div style="width:75%;">
+		<canvas id="line-chart" width="200" height="50"></canvas>
+	</div>
+    <br>
+    <div style="width:75%;">
+        <canvas id="line-chart1" width="100" height="20"></canvas>
+	</div>
+	<script>
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+            labels: ['11시 31분','12시 01분','12시 31분','13시 01분','13시 31분','14시 01분','14시 31분','15시 01분','15시 31분','16시 01분'],
+            datasets: [{
+            data: [930,930,930,930,930,930,930,930,930,930],
+            label: "💜 Indie_Dream",
+            borderColor: "#3e95cd",
+            fill: false
+            }, {
+            data: [8550,8550,8550,8550,8550,8550,8550,8550,8550,8550],
+            label: "💜 DHARMA: THE SWAN",
+            borderColor: "#8e5ea2",
+            fill: false
+            }, {
+            data: [7650,7650,7650,7650,7650,7650,7650,7650,7650,7650],
+            label: "💜 Nobrainer_Heroes",
+            borderColor: "#3cba9f",
+            fill: false
+            }, {
+            data: [3960,3960,3960,3960,3960,3960,3960,3960,3960,3960],
+            label: "💜 Angel Light The Elven Truce",
+            borderColor: "#e8c3b9",
+            fill: false
+            }, {
+            data: [4120,4120,4120,4120,4120,4120,4120,4120,4120,4120],
+            label: "💜 1000 days to escape",
+            borderColor: "#c45850",
+            fill: false
+            }
+            ]},
+        options: {
+            title: {
+            display: true,
+            text: ' 😀 This is price monitoring program Crawling STEAM site '
+            }
+        }});
+	</script>
+<div>
+        <a href="game1.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/612060/header.jpg?t=1564228826"></a>
+        <a href="game2.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/1028940/header.jpg?t=1564433995"></a>
+        <a href="game3.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/1097420/header.jpg?t=1564538976"></a><br>
+        <a href="game4.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/772730/header.jpg?t=1564101471"></a>
+        <a href="game5.html"><img src="https://steamcdn-a.akamaihd.net/steam/apps/1103100/header.jpg?t=1564063226"></a>
+</div>
+</body>
+
+</html>

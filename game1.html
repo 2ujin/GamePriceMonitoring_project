@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<style>
+        body{
+            background-color: antiquewhite;
+        }
+        div{
+            margin: auto;
+            text-align: center;
+        }
+        h1, h3{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<h1>  🎮 GAME PRICE 🎮 </h1>
+    <div><img src="https://steamcdn-a.akamaihd.net/steam/apps/612060/header.jpg?t=1564228826"></div>
+	<div style="width:75%;">
+<canvas id="line-chart" width="200" height="50"></canvas>
+	</div>
+
+	<script>
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+            labels: ['11시 31분','12시 01분','12시 31분','13시 01분','13시 31분','14시 01분','14시 31분','15시 01분','15시 31분','16시 01분'],
+            datasets: [{
+            data: [930,930,930,930,930,930,930,930,930,930],
+            label: "💜 Indie_Dream",
+            borderColor: "#3e95cd",
+            fill: false
+            },
+            ]},
+        options: {
+            title: {
+            display: true,
+            }
+        }});
+	</script>
+</body>
+</html>
