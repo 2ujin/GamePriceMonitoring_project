@@ -63,7 +63,7 @@
     </style>
 </head>
 <body>
-<div class="header"><a href="game_chart.html"><h1> 🎮 GAME PRICE 🎮 </h1></a></div>
+<div class="header"><a href="game_chart.html"><h1> 🎮 GAME PRICE MONITORING 🎮 </h1></a></div>
     <div class="information">
         <table class="table">
             <tr>
@@ -86,9 +86,9 @@
         new Chart(document.getElementById("line-chart"), {
             type: 'line',
             data: {
-            labels: ['11시 31분','12시 01분','12시 31분','13시 01분','13시 31분','14시 01분','14시 31분','15시 01분','15시 31분','16시 01분'],
+            labels: ['{{date1[0]}}','{{date1[1]}}','{{date1[2]}}','{{date1[3]}}','{{date1[4]}}','{{date1[5]}}','{{date1[6]}}','{{date1[7]}}','{{date1[8]}}','{{date1[9]}}'],
             datasets: [{
-            data: [8550,8550,8550,8550,8550,8550,8550,8550,8550,8550],
+            data: [{{data_arr1[1]}},{{data_arr2[1]}},{{data_arr3[1]}},{{data_arr4[1]}},{{data_arr5[1]}},{{data_arr6[1]}},{{data_arr7[1]}},{{data_arr8[1]}},{{data_arr9[1]}},{{data_arr10[1]}}],
             label: "💜 DHARMA: THE SWAN",
             borderColor: "#8e5ea2",
             fill: false
