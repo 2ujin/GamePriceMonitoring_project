@@ -39,8 +39,6 @@ azure에서 node.js를 사용하여 steams 크롤링 성공 !! (약 12시간동�
 azure storage에 값 잘 들어가고...!! 엑셀로 expport까지 됨.
 파이썬 사용해서 엑셀 값 배열에 다 넣고.. 이제 이걸 html로 보내서 차트에 값을 넣기만 하면 될 것 같다.
 ㅠㅠㅜㅠㅜㅠㅜㅠㅜ 이게 맞는지는 모르겠지만 뭔가 이젠 끝이 보여....눈물난다 ㅎㅎ^^
-![image](https://user-images.githubusercontent.com/42020919/62144822-66234b00-b32d-11e9-801f-54cb9defbcd0.png)
-
 * https://m.blog.naver.com/PostView.nhn?blogId=xowww&logNo=220858579104&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 * pip install flask
 
